@@ -1,0 +1,17 @@
+server:
+  port : 8082
+
+spring:
+  application:
+    name: Vaccination-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/vaccinationdb
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
