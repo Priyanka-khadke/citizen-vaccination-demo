@@ -3,13 +3,9 @@ server:
 spring:
   application:
     name: Citizen-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/citizendb
-    username: root
-    password: root
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: update
+  config:
+      import:
+        optional:
+        configserver: http://localhost:8888/
+
+
